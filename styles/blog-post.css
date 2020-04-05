@@ -51,15 +51,16 @@ blockquote i {
     font-style: italic;
     text-align: right;
   }
-.box {
+/*.box {
     background-color: lightgrey;
-    /*border: solid 1px blueviolet;*/
-}
+    border: solid 1px blueviolet;
+}*/
 .container {
     display: grid;
     grid-template-columns: repeat(12, [col-start] 1fr);
     gap: 20px;
     margin: auto auto;
+    background-color: lightgrey;
   }
 
   .container > * {
