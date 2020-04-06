@@ -158,11 +158,11 @@ blockquote i {
 
 .post figurecapture {
     display: block;
-    background: rgba(0, 0, 0, 0.39);
+    background: linear-gradient(to right, black, transparent 70%);
     background-position: top;
     background-position-y: top;
     color: white;
-    margin-top: -35px;
+    margin-top: -34px;
     padding-left: 15px;
     padding-bottom: 0px;
     padding-top: 5px;
@@ -174,7 +174,7 @@ blockquote i {
 /* signature with an extra color for using at least 3 as in the rubrics */
 .post-author {
     padding: 10px;
-    color: grey
+    color: rgb(51, 51, 51)
 }
 
 /* sharing buttons */
