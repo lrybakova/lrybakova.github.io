@@ -1,66 +1,8 @@
-h1 {
-    font-size: 1.8em;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    line-height: 0.6em;
-    text-transform: uppercase;
-}
-
-h2 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.3em;
-    line-height: 0.1em;
-    text-transform: uppercase;
-    margin-left: 10px;
-
-}
-
-h3 {
-    font-size: 1.2em;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
-    width: min-content;
-
-}
-
-blockquote {
-    min-height: 5em;
-    padding   : 1em 4em;
-    font      : 1em/150% sans-serif;
-    position  : relative;
-    
-}
-
-blockquote::before,
-blockquote::after {
-  position: absolute;
-  height  : 2rem;
-  font    : 4rem/100% Georgia, "Times New Roman", Times, serif;
-}
-
-blockquote::before {
-  content: '“';
-  top    : 0.3rem;
-  left   : 0.9rem;
-}
-
-blockquote::after {
-  content: '”';
-  bottom : 0.3rem;
-  right  : 0.8rem;
-}
-
-blockquote i {
-    display   : block;
-    font-size : 0.8em;
-    margin-top: 1rem;
-    font-style: italic;
-    text-align: right;
-}
-
+/* Setting up the blog post page's layout */
 .container {
     display: grid;
     grid-template-columns: repeat(12, [col-start] 1fr);
-    gap: 15px;
+    gap: 10px;
     margin: auto auto;
     background-color: lightgrey;
 }
@@ -68,6 +10,8 @@ blockquote i {
 .container > * {
     grid-column: col-start / span 12;
 }
+
+/* Top bar with navigation back to home page */ 
 
 .top-menu {
     display: table;
@@ -80,10 +24,13 @@ blockquote i {
     text-decoration-line: none;
 }
 
+/* page's header */ 
 .header {
     text-align: center;
     border-bottom: dotted black 1px;
 }
+
+/* about me block */ 
 
 .bio-layout {
     border-top: dotted 1px;
@@ -123,7 +70,13 @@ blockquote i {
     padding-right: 15px;
     padding-bottom: 15px;
     padding-top: 10px;
+    font-family: 'Open Sans', sans-serif;
 }
+
+.twitter-follow-button {
+    padding-left: 15px;
+}
+/* teamplate of the blog post */ 
 
 .post-layout {
     display: flex;
@@ -133,12 +86,51 @@ blockquote i {
     margin-right: 10px;
     margin-left: 10px;
     margin-bottom: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* fancy blockquote styling */ 
+blockquote {
+    min-height: 5em;
+    padding   : 1em 4em;
+    font      : 1em/150% sans-serif;
+    position  : relative;
+    
+}
+
+blockquote::before,
+blockquote::after {
+  position: absolute;
+  height  : 2rem;
+  font    : 4rem/100% 'Georgia', sans-serif;
+}
+
+blockquote::before {
+  content: '“';
+  top    : 0.3rem;
+  left   : 0.9rem;
+}
+
+blockquote::after {
+  content: '”';
+  bottom : 0.3rem;
+  right  : 0.8rem;
+}
+
+blockquote i {
+    display   : block;
+    font-size : 0.8em;
+    margin-top: 1rem;
+    font-style: italic;
+    text-align: right;
 }
 
 .post-quote {
     display: flex;
     flex-direction: row-reverse;
 }
+
+/* responsive layout for post's illustrations */ 
 
 .pic1,
 .pic2 {
@@ -172,20 +164,26 @@ blockquote i {
     color: white;
     margin-top: -35px;
     padding-left: 15px;
-    padding-bottom: 5px;
+    padding-bottom: 0px;
     padding-top: 5px;
     border: black;
     font-size: 1.1em;
+    font-weight: bold;
 }
 
+/* signature with an extra color for using at least 3 as in the rubrics */
 .post-author {
     padding: 10px;
+    color: grey
 }
+
+/* sharing buttons */
 
 .post-share {
     display: flex;
     padding: 10px;
     flex-direction: column;
+    text-decoration: underline;
 }
 
 .sharethis-inline-share-buttons {
@@ -193,11 +191,9 @@ blockquote i {
     padding-top: 5px;
 }
 
-footer {
-    border-top: dotted 1px;
-    padding: 5px 0 10px 15px;
-    margin-top: 10px;
-}
+
+
+/* mobile landscape and tablet portrait */ 
 
 @media (min-width: 500px) {
 
@@ -217,27 +213,37 @@ footer {
 
 .name {
     grid-column: 2 / 3;
-    grid-row: 4;
+    grid-row: 3;
 }
 
 .bio-layout .bio {
     grid-column: 2 / 4;
+    grid-row: 4;
+}
+
+.twitter-follow-button {
+    padding-right: 15px;
     grid-row: 5;
 }
 }
 
+/* tablet landscape and small laptop */ 
+
 @media (min-width: 900px) {
 .container {
         width: 90%;
-        gap: 10px;
-        row-gap: 10px;
-    }
+}
+
+.twitter-follow-button {
+   grid-row: 6;
+}
 
 .post-layout {
     display: grid;
     grid-template-columns: subgrid;
     grid-template-rows: subgrid;
     grid-auto-columns: minmax(50px,max-content);
+    row-gap: 15px;
 }
 
 .post-header {
@@ -290,11 +296,12 @@ blockquote {
 }
 }
 
+/* big screens */
+
 @media (min-width: 1100px) {
 
 .post-layout {
     display: grid;
     grid-auto-columns: minmax(70px,max-content);
-    row-gap: 10px;
 }
 }
