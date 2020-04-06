@@ -1,9 +1,10 @@
-h1{
+h1 {
     font-size: 1.8em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     line-height: 0.6em;
     text-transform: uppercase;
 }
+
 h2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.3em;
@@ -12,20 +13,23 @@ h2 {
     margin-left: 10px;
 
 }
-h3{
+
+h3 {
     font-size: 1.2em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
     width: min-content;
 
 }
+
 blockquote {
     min-height: 5em;
     padding   : 1em 4em;
     font      : 1em/150% sans-serif;
     position  : relative;
     
-  }
+}
+
 blockquote::before,
 blockquote::after {
   position: absolute;
@@ -44,53 +48,54 @@ blockquote::after {
   bottom : 0.3rem;
   right  : 0.8rem;
 }
+
 blockquote i {
     display   : block;
     font-size : 0.8em;
     margin-top: 1rem;
     font-style: italic;
     text-align: right;
-  }
-/*.box {
-    background-color: lightgrey;
-    border: solid 1px blueviolet;
-}*/
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(12, [col-start] 1fr);
-    gap: 20px;
+    gap: 15px;
     margin: auto auto;
     background-color: lightgrey;
-  }
+}
 
-  .container > * {
+.container > * {
     grid-column: col-start / span 12;
-  }
-  .top-menu {
+}
+
+.top-menu {
     display: table;
     border-bottom: black solid 1px;
     text-align: right;
     text-decoration: none;
+}
 
-  }
-  .top-menu a {
-      text-decoration-line: none;
-  }
-  
-  .header {
-      text-align: center;
-      border-bottom: dotted black 1px;
-      
-  }
+.top-menu a {
+    text-decoration-line: none;
+}
+
+.header {
+    text-align: center;
+    border-bottom: dotted black 1px;
+}
+
 .bio-layout {
     border-top: dotted 1px;
     margin-right: 10px;
     margin-left: 10px;
 }
+
 .bio-layout h3 {
     margin-top: 0px;
     margin-bottom: 0px;
 }
+
 .name {
     margin-left: auto;
     width: min-content;
@@ -99,25 +104,27 @@ blockquote i {
     padding-left: 15px;
     padding-right: 15px;
 }
+
 .avatar-layout {
-      width: min-content;
-      margin: auto auto;
-      
-  }
-  .avatar-layout img {
-        width: 163px;
-        border-radius: 50%;
-        padding: 15px;
-    }
+    width: min-content;
+    margin: auto auto;
+}
+
+.avatar-layout img {
+    width: 163px;
+    border-radius: 50%;
+    padding: 15px;
+}
      
 .bio {
-      width: fit-content;
-      margin: auto;
-      padding-left: 15px;
-      padding-right: 15px;
-      padding-bottom: 15px;
-      padding-top: 10px;
-  }
+    width: fit-content;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+
 .post-layout {
     display: flex;
     justify-content: center;
@@ -126,12 +133,13 @@ blockquote i {
     margin-right: 10px;
     margin-left: 10px;
     margin-bottom: 20px;
-    
 }
+
 .post-quote {
     display: flex;
     flex-direction: row-reverse;
 }
+
 .pic1,
 .pic2 {
     display: flex;
@@ -143,22 +151,19 @@ blockquote i {
     margin: auto auto;
     justify-content: center;
 }
+
 .pic1 img,
 .pic2 img {
     max-width: 100%;
     vertical-align: center;
     align-items: center;
-   
-
-    
-   
 }
+
 .post figure {
     margin: 0px;
     padding: 0px;
-    
-    
 }
+
 .post figurecapture {
     display: block;
     background: rgba(0, 0, 0, 0.39);
@@ -172,25 +177,28 @@ blockquote i {
     border: black;
     font-size: 1.1em;
 }
+
 .post-author {
     padding: 10px;
 }
+
 .post-share {
     display: flex;
     padding: 10px;
     flex-direction: column;
 }
+
 .sharethis-inline-share-buttons {
     margin-top: 10px;
     padding-top: 5px;
-   
-    
 }
-.footer {
-    border-top: solid 1px;
-    margin: 10px;
-    padding: 10px;
+
+footer {
+    border-top: dotted 1px;
+    padding: 5px 0 10px 15px;
+    margin-top: 10px;
 }
+
 @media (min-width: 500px) {
 
 .bio-layout {
@@ -199,18 +207,19 @@ blockquote i {
     grid-template-columns: subgrid;
     grid-template-rows: subgrid;
     grid-row: 3;
-   
-    
     justify-content: space-between;
 }
+
 .avatar-layout {
     grid-column: 1;
     grid-row: 1 / 9;
 }
+
 .name {
     grid-column: 2 / 3;
     grid-row: 4;
 }
+
 .bio-layout .bio {
     grid-column: 2 / 4;
     grid-row: 5;
@@ -230,22 +239,27 @@ blockquote i {
     grid-template-rows: subgrid;
     grid-auto-columns: minmax(50px,max-content);
 }
+
 .post-header {
     grid-row: 1;
 }
+
 h3 {
     margin-bottom: 0px;
 }
+
 .post-quote {
     grid-row: 2;
     grid-column: 8 / 12;
     flex: 0;
 }
+
 blockquote {
     flex-shrink: 0;
     margin-top: 0px;
     margin-bottom: 0px;
 }
+
 .pic1 {
     grid-column: 8 / 12;
     grid-row: 3;
@@ -259,19 +273,23 @@ blockquote {
     grid-column: 1 / 7;
     grid-row: 3;
 } 
+
 .post-tips {
     grid-column: 1 / 7;
     grid-row: 4;
 }
+
 .post-author {
     grid-column: 1 / 12;
     grid-row: 5;
 }
+
 .post-share {
     grid-column: 1 /12;
     grid-row: 6;
 }
 }
+
 @media (min-width: 1100px) {
 
 .post-layout {
