@@ -1,4 +1,5 @@
 /* Setting up the blog post page's layout */
+
 .container {
     display: grid;
     grid-template-columns: repeat(12, [col-start] 1fr);
@@ -7,11 +8,12 @@
     background-color: lightgrey;
 }
 
-.container > * {
+.container>* {
     grid-column: col-start / span 12;
 }
 
-/* Top bar with navigation back to home page */ 
+
+/* Top bar with navigation back to home page */
 
 .top-menu {
     display: table;
@@ -22,15 +24,19 @@
 
 .top-menu a {
     text-decoration-line: none;
+    font-size: 1.3em;
 }
 
-/* page's header */ 
+
+/* page's header */
+
 .header {
     text-align: center;
     border-bottom: dotted black 1px;
 }
 
-/* about me block */ 
+
+/* about me block */
 
 .bio-layout {
     border-top: dotted 1px;
@@ -47,9 +53,19 @@
     margin-left: auto;
     width: min-content;
     margin-right: auto;
-    padding-top: 15px;   
+    padding-top: 15px;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.occupation {
+    font-size: xx-small;
+    font-style: italic;
+    padding-bottom: 0px;
+    font-size: 0.9em;
+    padding-left: 0.1em;
+    text-align: center;
+    margin: auto 0 auto 0;
 }
 
 .avatar-layout {
@@ -63,7 +79,7 @@
     border-radius: 50%;
     padding: 15px;
 }
-     
+
 .bio {
     width: fit-content;
     margin: auto;
@@ -71,13 +87,15 @@
     padding-right: 15px;
     padding-bottom: 15px;
     padding-top: 10px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 .twitter-follow-button {
     padding-left: 15px;
 }
-/* teamplate of the blog post */ 
+
+
+/* teamplate of the blog post */
 
 .post-layout {
     display: flex;
@@ -87,40 +105,41 @@
     margin-right: 10px;
     margin-left: 10px;
     margin-bottom: 20px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
-/* fancy blockquote styling */ 
+
+/* fancy blockquote styling */
+
 blockquote {
     min-height: 5em;
-    padding   : 1em 4em;
-    font      : 1em/150% sans-serif;
-    position  : relative;
-    
+    padding: 1em 4em;
+    font: 1em/150% sans-serif;
+    position: relative;
 }
 
 blockquote::before,
 blockquote::after {
-  position: absolute;
-  height  : 2rem;
-  font    : 4rem/100% 'Georgia', sans-serif;
+    position: absolute;
+    height: 2rem;
+    font: 4rem/100% "Georgia", "Times New Roman", Times, serif;
 }
 
 blockquote::before {
-  content: '“';
-  top    : 0.3rem;
-  left   : 0.9rem;
+    content: "“";
+    top: 0.3rem;
+    left: 0.9rem;
 }
 
 blockquote::after {
-  content: '”';
-  bottom : 0.3rem;
-  right  : 0.8rem;
+    content: "”";
+    bottom: 0.3rem;
+    right: 0.8rem;
 }
 
 blockquote i {
-    display   : block;
-    font-size : 0.8em;
+    display: block;
+    font-size: 0.8em;
     margin-top: 1rem;
     font-style: italic;
     text-align: right;
@@ -131,7 +150,8 @@ blockquote i {
     flex-direction: row-reverse;
 }
 
-/* responsive layout for post's illustrations */ 
+
+/* responsive layout for post's illustrations */
 
 .pic1,
 .pic2 {
@@ -157,26 +177,26 @@ blockquote i {
     padding: 0px;
 }
 
-.post figurecapture {
-    display: block;
-    background: linear-gradient(to right, black, transparent 70%);
-    background-position: top;
-    background-position-y: top;
-    color: white;
-    margin-top: -34px;
-    padding-left: 15px;
-    padding-bottom: 0px;
-    padding-top: 5px;
-    border: black;
-    font-size: 1.1em;
+.underline {
+    text-decoration: underline;
+}
+
+.bold {
     font-weight: bold;
 }
 
+.italic {
+    font-style: italic;
+}
+
+
 /* signature with an extra color for using at least 3 as in the rubrics */
+
 .post-author {
     padding: 10px;
-    color: rgb(51, 51, 51)
+    color: rgb(51, 51, 51);
 }
+
 
 /* sharing buttons */
 
@@ -193,116 +213,104 @@ blockquote i {
 }
 
 
-
-/* mobile landscape and tablet portrait */ 
+/* mobile landscape and tablet portrait */
 
 @media (min-width: 500px) {
-
-.bio-layout {
-    grid-column: col-start / span 12;
-    display: grid;
-    grid-template-columns: subgrid;
-    grid-template-rows: subgrid;
-    grid-row: 3;
-    justify-content: space-between;
+    .bio-layout {
+        grid-column: col-start / span 12;
+        display: grid;
+        grid-template-columns: subgrid;
+        grid-template-rows: subgrid;
+        grid-row: 3;
+        justify-content: space-between;
+    }
+    .occupation {
+        text-align: left;
+        margin-bottom: 0;
+    }
+    .avatar-layout {
+        grid-column: 1;
+        grid-row: 1 / 9;
+    }
+    .name {
+        grid-column: 2 / 3;
+        grid-row: 3;
+    }
+    .bio-layout .bio {
+        grid-column: 2 / 4;
+        grid-row: 4;
+    }
+    .twitter-follow-button {
+        padding-right: 15px;
+        grid-row: 5;
+    }
 }
 
-.avatar-layout {
-    grid-column: 1;
-    grid-row: 1 / 9;
-}
 
-.name {
-    grid-column: 2 / 3;
-    grid-row: 3;
-}
-
-.bio-layout .bio {
-    grid-column: 2 / 4;
-    grid-row: 4;
-}
-
-.twitter-follow-button {
-    padding-right: 15px;
-    grid-row: 5;
-}
-}
-
-/* tablet landscape and small laptop */ 
+/* tablet landscape and small laptop */
 
 @media (min-width: 900px) {
-.container {
+    .container {
         width: 90%;
+    }
+    .twitter-follow-button {
+        grid-row: 6;
+    }
+    .post-layout {
+        display: grid;
+        grid-template-columns: subgrid;
+        grid-template-rows: subgrid;
+        grid-auto-columns: minmax(50px, max-content);
+        row-gap: 15px;
+    }
+    .post-header {
+        grid-row: 1;
+    }
+    h3 {
+        margin-bottom: 0px;
+    }
+    .post-quote {
+        grid-row: 2;
+        grid-column: 8 / 12;
+        flex: 0;
+    }
+    blockquote {
+        flex-shrink: 0;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .pic1 {
+        grid-column: 8 / 12;
+        grid-row: 3;
+    }
+    .pic2 {
+        grid-column: 8 / 12;
+        grid-row: 4;
+    }
+    .post-fact {
+        grid-column: 1 / 7;
+        grid-row: 3;
+    }
+    .post-tips {
+        grid-column: 1 / 7;
+        grid-row: 4;
+    }
+    .post-author {
+        grid-column: 1 / 12;
+        grid-row: 5;
+    }
+    .post-share {
+        grid-column: 1 /12;
+        grid-row: 6;
+    }
 }
 
-.twitter-follow-button {
-   grid-row: 6;
-}
-
-.post-layout {
-    display: grid;
-    grid-template-columns: subgrid;
-    grid-template-rows: subgrid;
-    grid-auto-columns: minmax(50px,max-content);
-    row-gap: 15px;
-}
-
-.post-header {
-    grid-row: 1;
-}
-
-h3 {
-    margin-bottom: 0px;
-}
-
-.post-quote {
-    grid-row: 2;
-    grid-column: 8 / 12;
-    flex: 0;
-}
-
-blockquote {
-    flex-shrink: 0;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-.pic1 {
-    grid-column: 8 / 12;
-    grid-row: 3;
-}
-.pic2 {
-    grid-column: 8 / 12;
-    grid-row: 4;
-}
-
-.post-fact {
-    grid-column: 1 / 7;
-    grid-row: 3;
-} 
-
-.post-tips {
-    grid-column: 1 / 7;
-    grid-row: 4;
-}
-
-.post-author {
-    grid-column: 1 / 12;
-    grid-row: 5;
-}
-
-.post-share {
-    grid-column: 1 /12;
-    grid-row: 6;
-}
-}
 
 /* big screens */
 
 @media (min-width: 1100px) {
-
-.post-layout {
-    display: grid;
-    grid-auto-columns: minmax(70px,max-content);
-}
+    .post-layout {
+        display: grid;
+        grid-auto-columns: minmax(70px, max-content);
+    }
 }
