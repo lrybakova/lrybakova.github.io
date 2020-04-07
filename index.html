@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link href="./styles/styles.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/styles/styles.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scandinavian journeys | Personal blog - Liudmila Rybakova</title>
-    <meta name="description" content="My personal blog about travelling to Scandinavian countries">
-    <meta name="keywords" content="scandinavia, finland, sweden, iceland, travel, blog">
+    <meta name="description" content="My personal blog about travelling to Scandinavian countries" />
+    <meta name="keywords" content="scandinavia, finland, sweden, iceland, travel, blog" />
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5e873755780af00019d5c7e7&product=inline-share-buttons" async="async"></script>
 </head>
+
 <body>
     <div class="main-page-container">
         <header class="header">
@@ -15,23 +18,58 @@
         <nav class="main-navigation">
             <h2>My journeys</h2>
             <ul>
-                <li><a href="blog-post.html#Iceland">Iceland</a></li>
-                <li><a href="blog-post.html#Finland">Finland</a></li>
-                <li><a href="blog-post.html#Sweden">Sweden</a></li>
+                <li><a href="./static/blog-post.html#Iceland">Iceland</a></li>
+                <li><a href="./static/blog-post.html#Finland">Finland</a></li>
+                <li><a href="./static/blog-post.html#Sweden">Sweden</a></li>
             </ul>
         </nav>
+        <aside class="latest-post">
+            <h2>Latest post</h2>
+            <div class="lp-header">
+                <h3>Iceland</h3>
+                <time datetime="2020-03-25">25.03.2020</time>
+            </div>
+            <div class="latest-post-layout">
+                <div class="lp-content">
+                    <p>
+                        Check-out interesting facts and useful tips about travelling around Iceland.
+                    </p>
+                    <p>
+                        <a href="./static/blog-post.html#Iceland">Read ></a>
+                    </p>
+                </div>
+                <div class="thumbnail"></div>
+            </div>
+            <div class="sharethis-inline-share-buttons"></div>
+        </aside>
         <main class="main-content">
             <article>
                 <h2>About me</h2>
-                <p>Welcome to Liudmila's travel blog! Here I share my photos and tips about  journeys across Scandinavia.
+                <p>
+                    Welcome to Liudmila's travel blog! Here I share my photos and tips about journeys across Scandinavia.
                 </p>
-                <p><a href="blog-post.html">More ></a></p>
+                <p><a href="./static/blog-post.html">More ></a></p>
             </article>
         </main>
-        <footer>
-            &copy; Liudmila Rybakova
+        <footer class="footer">
+            <div class="footer-layout">
+                <div class="copyright">&copy; Liudmila Rybakova</div>
+                <div class="subscription">
+                    <form action="#">
+                        <h4>Subscribe to our Newsletter</h4>
+                        <div class="newsletter-container">
+                            <div class="newsletter-adress">
+                                <input type="text" placeholder="Email address" name="mail" required="" />
+                            </div>
+                            <div class="newsletter-button">
+                                <input type="submit" value="Done" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </footer>
     </div>
-    
 </body>
+
 </html>
