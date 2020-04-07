@@ -23,6 +23,10 @@ h3 {
     width: min-content;
 }
 
+h5 {
+    margin: 0;
+}
+
 footer {
     border-top: dotted 1px;
     padding: 5px 0 10px 15px;
